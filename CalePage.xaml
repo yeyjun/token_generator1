@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TokenGenerator.CalePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Cal-e">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+ Event" Clicked="OnAddEventClicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="16" RowDefinitions="Auto,Auto,Auto,*" RowSpacing="12">
+
+            <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto">
+                <Button Grid.Column="0" Text="&#8249;" WidthRequest="44" Clicked="OnPrevMonthClicked" />
+                <Label
+                    Grid.Column="1"
+                    x:Name="MonthLabel"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center" />
+                <Button Grid.Column="2" Text="&#8250;" WidthRequest="44" Clicked="OnNextMonthClicked" />
+            </Grid>
+
+            <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*,*,*,*">
+                <Label Grid.Column="0" Text="Sun" HorizontalTextAlignment="Center" FontSize="11" TextColor="Gray" />
+                <Label Grid.Column="1" Text="Mon" HorizontalTextAlignment="Center" FontSize="11" TextColor="Gray" />
+                <Label Grid.Column="2" Text="Tue" HorizontalTextAlignment="Center" FontSize="11" TextColor="Gray" />
+                <Label Grid.Column="3" Text="Wed" HorizontalTextAlignment="Center" FontSize="11" TextColor="Gray" />
+                <Label Grid.Column="4" Text="Thu" HorizontalTextAlignment="Center" FontSize="11" TextColor="Gray" />
+                <Label Grid.Column="5" Text="Fri" HorizontalTextAlignment="Center" FontSize="11" TextColor="Gray" />
+                <Label Grid.Column="6" Text="Sat" HorizontalTextAlignment="Center" FontSize="11" TextColor="Gray" />
+            </Grid>
+
+            <CollectionView Grid.Row="2" x:Name="DaysCollection" HeightRequest="270">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="7" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="2"
+                            Padding="0"
+                            HeightRequest="36"
+                            StrokeShape="RoundRectangle 8"
+                            Stroke="Transparent"
+                            BackgroundColor="{Binding CellColor}">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnDayTapped" />
+                            </Border.GestureRecognizers>
+                            <Grid>
+                                <Label
+                                    Text="{Binding Day}"
+                                    TextColor="{Binding TextColor}"
+                                    FontAttributes="{Binding FontAttr}"
+                                    FontSize="13"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+                                <BoxView
+                                    IsVisible="{Binding HasEvents}"
+                                    Color="#7C3AED"
+                                    WidthRequest="5"
+                                    HeightRequest="5"
+                                    CornerRadius="2.5"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="End"
+                                    Margin="0,0,0,3" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Grid Grid.Row="3" RowDefinitions="Auto,*" RowSpacing="8">
+                <Label Grid.Row="0" x:Name="SelectedDayLabel" FontAttributes="Bold" FontSize="14" />
+
+                <CollectionView Grid.Row="1" x:Name="EventsList">
+                    <CollectionView.EmptyView>
+                        <Label Text="No events for this day." TextColor="Gray" Margin="0,8" />
+                    </CollectionView.EmptyView>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems Mode="Reveal">
+                                        <SwipeItem Text="Delete" BackgroundColor="#DC3545" Invoked="OnDeleteEventSwiped" />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+
+                                <Border
+                                    Margin="0,4"
+                                    Padding="12,8"
+                                    StrokeShape="RoundRectangle 10"
+                                    Stroke="#E2E8F0"
+                                    BackgroundColor="White">
+                                    <Grid ColumnDefinitions="4,*,Auto" ColumnSpacing="10">
+                                        <BoxView Grid.Column="0" BackgroundColor="#7C3AED" />
+
+                                        <VerticalStackLayout Grid.Column="1">
+                                            <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                            <Label Text="{Binding Notes}" FontSize="12" TextColor="Gray" LineBreakMode="TailTruncation" />
+                                            <Label Text="{Binding TimeLabel}" FontSize="11" TextColor="#7C3AED" />
+                                        </VerticalStackLayout>
+
+                                        <Button Grid.Column="2" Text="Edit" VerticalOptions="Center" Clicked="OnEditEventClicked" />
+                                    </Grid>
+                                </Border>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+
+    </Grid>
+</ContentPage>

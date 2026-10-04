@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TokenGenerator.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TokenGenerator"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutWidth="230"
+    FlyoutBackgroundColor="#FFFDFB"
+    Title="BrewCode Admin">
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="#2E1B12" Padding="24,36,24,22">
+            <VerticalStackLayout Spacing="3">
+                <Label Text="brewCode" FontFamily="OpenSansSemibold" FontSize="22" TextColor="#FDF6EE" />
+                <Label Text="INFRASTRUCTURE &amp; MANAGEMENT" FontSize="10" CharacterSpacing="2" FontAttributes="Bold" TextColor="#C08552" />
+            </VerticalStackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutContent>
+        <ScrollView>
+            <VerticalStackLayout x:Name="MenuItemsLayout" Padding="0,8" Spacing="1" />
+        </ScrollView>
+    </Shell.FlyoutContent>
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout Padding="20,12,20,18" Spacing="10">
+            <BoxView HeightRequest="1" Color="#EDE4DA" />
+            <Label Text="THEME" FontSize="10" FontAttributes="Bold" CharacterSpacing="1.2" TextColor="#A8896D" />
+            <HorizontalStackLayout x:Name="ThemeOptionRow" Spacing="6" />
+            <Label Text="BrewCode Admin  •  v1.0" FontSize="10" TextColor="#A8A29E" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Title="Home" Icon="icon_linux.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:HomePage}"
+            Route="HomePage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Weather" Icon="icon_weather.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:WeatherPage}"
+            Route="WeatherPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Speed Test" Icon="icon_speedtest.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:SpeedTestPage}"
+            Route="SpeedTestPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Spotify" Icon="icon_spotify.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:SpotifyPage}"
+            Route="SpotifyPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Cipher" Icon="icon_cipher.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:CaesarCipherPage}"
+            Route="CaesarCipherPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Token" Icon="icon_token.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:TokenGeneratorPage}"
+            Route="TokenGeneratorPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Word Puzzle" Icon="icon_game.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:CipherGamePage}"
+            Route="CipherGamePage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Deal or No Deal" Icon="icon_game.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:DealOrNoDealPage}"
+            Route="DealOrNoDealPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Hangaroo" Icon="icon_game.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:HangarooPage}"
+            Route="HangarooPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Note" Icon="icon_note.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:NotesPage}"
+            Route="NotesPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Cal-e" Icon="icon_calendar.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:CalePage}"
+            Route="CalePage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Holy Rosary" Icon="icon_rosary.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:RosaryPage}"
+            Route="RosaryPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Dictionary" Icon="icon_dictionary.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:DictionaryPage}"
+            Route="DictionaryPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="LET Reviewer" Icon="icon_reviewer.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:LETReviewerPage}"
+            Route="LETReviewerPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Tools" Icon="icon_tools.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:ToolsPage}"
+            Route="ToolsPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Calculator" Icon="icon_tools.svg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:CalculatorPage}"
+            Route="CalculatorPage" />
+    </FlyoutItem>
+
+</Shell>

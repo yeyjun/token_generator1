@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TokenGenerator.WeatherPage"
+             Title="Weather">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="My Location" Clicked="OnMyLocationClicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="Auto,*" RowSpacing="0">
+
+        <Grid Grid.Row="0" Padding="20,14" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12" BackgroundColor="#1C1917">
+            <Label Grid.Column="0" x:Name="WeatherIconLabel" Text="⏳" FontSize="30" VerticalOptions="Center" />
+
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                <Label x:Name="LocationLabel" Text="Locating..." TextColor="White" FontAttributes="Bold" FontSize="15" />
+                <Label x:Name="ConditionLabel" TextColor="#B8B0A6" FontSize="12" />
+            </VerticalStackLayout>
+
+            <Label Grid.Column="2" x:Name="TemperatureLabel" TextColor="White" FontSize="26" FontAttributes="Bold" VerticalOptions="Center" />
+        </Grid>
+
+        <WebView Grid.Row="1" x:Name="WindyWebView" />
+
+    </Grid>
+
+</ContentPage>

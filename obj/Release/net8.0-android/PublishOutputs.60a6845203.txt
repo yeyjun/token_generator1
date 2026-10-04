@@ -1,0 +1,4 @@
+C:\Users\Asus\source\repos\TokenGenerator\TokenGenerator\bin\Release\net8.0-android\publish\com.companyname.tokengenerator-Signed.aab
+C:\Users\Asus\source\repos\TokenGenerator\TokenGenerator\bin\Release\net8.0-android\publish\com.companyname.tokengenerator.aab
+C:\Users\Asus\source\repos\TokenGenerator\TokenGenerator\bin\Release\net8.0-android\publish\com.companyname.tokengenerator-Signed.apk
+C:\Users\Asus\source\repos\TokenGenerator\TokenGenerator\bin\Release\net8.0-android\publish\_Microsoft.Android.Resource.Designer.dll

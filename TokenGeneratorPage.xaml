@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TokenGenerator.TokenGeneratorPage"
+             Title="Token">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,20" Spacing="20">
+
+            <Picker x:Name="BusinessPicker" Title="Select a business" SelectedIndexChanged="OnBusinessSelectedIndexChanged" />
+
+            <Button
+                x:Name="AddBusinessButton"
+                Text="Add Business"
+                Clicked="OnAddBusinessClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="GenerateTokenButton"
+                Text="Generate Token"
+                Clicked="OnGenerateTokenClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="ToggleActiveButton"
+                Text="Deactivate"
+                Clicked="OnToggleActiveClicked"
+                IsEnabled="False"
+                HorizontalOptions="Fill" />
+
+            <Label x:Name="StatusLabel" TextColor="Gray" />
+            <Label
+                x:Name="TokenLabel"
+                FontFamily="OpenSansSemibold"
+                FontSize="18"
+                LineBreakMode="CharacterWrap" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

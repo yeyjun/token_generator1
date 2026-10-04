@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TokenGenerator.NotesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:conv="clr-namespace:TokenGenerator.Converters"
+    Title="Note">
+
+    <ContentPage.Resources>
+        <conv:ColorHexConverter x:Key="ColorHexConverter" />
+        <conv:ColorHexToTintConverter x:Key="ColorTintConverter" />
+        <conv:IsNotNullConverter x:Key="IsNotNullConverter" />
+        <conv:HtmlToPlainTextConverter x:Key="HtmlToPlainTextConverter" />
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New" Clicked="OnNewClicked" />
+    </ContentPage.ToolbarItems>
+
+    <CollectionView x:Name="NotesList" Margin="24">
+        <CollectionView.EmptyView>
+            <Label
+                Text="No notes yet. Tap New to add one."
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                TextColor="Gray" />
+        </CollectionView.EmptyView>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <SwipeView>
+                    <SwipeView.RightItems>
+                        <SwipeItems Mode="Reveal">
+                            <SwipeItem
+                                Text="Delete"
+                                BackgroundColor="#DC3545"
+                                Invoked="OnDeleteSwiped" />
+                        </SwipeItems>
+                    </SwipeView.RightItems>
+
+                    <Border
+                        Margin="0,4"
+                        Padding="0"
+                        Stroke="Transparent"
+                        StrokeShape="RoundRectangle 10"
+                        BackgroundColor="{Binding ColorTag, Converter={StaticResource ColorTintConverter}}">
+                        <Grid>
+                            <Grid ColumnDefinitions="4,*,Auto">
+                                <BoxView
+                                    Grid.Column="0"
+                                    Color="{Binding ColorTag, Converter={StaticResource ColorHexConverter}}" />
+
+                                <VerticalStackLayout Grid.Column="1" Padding="12,10">
+                                    <VerticalStackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnNoteTapped" />
+                                    </VerticalStackLayout.GestureRecognizers>
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" Margin="0,0,16,0" />
+                                    <Label Text="{Binding Content, Converter={StaticResource HtmlToPlainTextConverter}}" LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding CreatedAt, StringFormat='{0:g}'}" FontSize="11" TextColor="Gray" />
+                                    <Label
+                                        Text="{Binding ReminderAt, StringFormat='Reminder: {0:g}'}"
+                                        FontSize="11"
+                                        TextColor="DarkOrange"
+                                        IsVisible="{Binding ReminderAt, Converter={StaticResource IsNotNullConverter}}" />
+                                </VerticalStackLayout>
+
+                                <HorizontalStackLayout Grid.Column="2" Padding="8" Spacing="6" VerticalOptions="Center">
+                                    <Button Text="Edit" Clicked="OnEditClicked" />
+                                </HorizontalStackLayout>
+                            </Grid>
+
+                            <Label
+                                Text="&#11088;"
+                                FontSize="12"
+                                Margin="0,4,4,0"
+                                HorizontalOptions="End"
+                                VerticalOptions="Start"
+                                IsVisible="{Binding IsPinned}"
+                                InputTransparent="True" />
+                        </Grid>
+                    </Border>
+                </SwipeView>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

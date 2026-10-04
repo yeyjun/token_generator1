@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TokenGenerator.DealOrNoDealPage"
+             Title="Deal or No Deal">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="14">
+
+            <Label
+                Text="Deal or No Deal"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="InstructionLabel"
+                HorizontalTextAlignment="Center" />
+
+            <FlexLayout
+                x:Name="CasesLayout"
+                Wrap="Wrap"
+                JustifyContent="Center"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="YourCaseLabel"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center" />
+
+            <VerticalStackLayout
+                x:Name="OfferPanel"
+                Spacing="10"
+                IsVisible="False">
+                <Label
+                    x:Name="OfferLabel"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#16A34A"
+                    HorizontalTextAlignment="Center" />
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button
+                        Text="Deal"
+                        Clicked="OnDealClicked"
+                        WidthRequest="120"
+                        BackgroundColor="#16A34A"
+                        TextColor="White" />
+                    <Button
+                        Text="No Deal"
+                        Clicked="OnNoDealClicked"
+                        WidthRequest="120"
+                        BackgroundColor="#DC3545"
+                        TextColor="White" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Label
+                x:Name="ResultLabel"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center" />
+
+            <Button
+                x:Name="NewGameButton"
+                Text="New Game"
+                Clicked="OnNewGameClicked"
+                HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

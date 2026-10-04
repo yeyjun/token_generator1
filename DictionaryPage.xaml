@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TokenGenerator.DictionaryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Dictionary">
+
+    <Grid Padding="16" RowDefinitions="Auto,Auto,Auto,*" RowSpacing="10">
+
+        <SearchBar
+            Grid.Row="0"
+            x:Name="SearchBox"
+            Placeholder="Search terms or definitions..."
+            TextChanged="OnSearchChanged" />
+
+        <Picker
+            Grid.Row="1"
+            x:Name="CategoryPicker"
+            Title="Category"
+            SelectedIndexChanged="OnFilterChanged" />
+
+        <Label
+            Grid.Row="2"
+            x:Name="ResultCountLabel"
+            FontSize="12"
+            TextColor="Gray" />
+
+        <CollectionView Grid.Row="3" x:Name="EntriesList">
+            <CollectionView.EmptyView>
+                <Label
+                    Text="No matching terms."
+                    TextColor="Gray"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Margin="0,4"
+                        Padding="14,10"
+                        StrokeShape="RoundRectangle 10"
+                        Stroke="#E2E8F0"
+                        BackgroundColor="White">
+                        <VerticalStackLayout Spacing="4">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <Label
+                                    Grid.Column="0"
+                                    Text="{Binding Term}"
+                                    FontAttributes="Bold"
+                                    FontSize="16" />
+                                <Border
+                                    Grid.Column="1"
+                                    Padding="8,3"
+                                    StrokeShape="RoundRectangle 8"
+                                    StrokeThickness="0"
+                                    BackgroundColor="{Binding CategoryColor}"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        Text="{Binding Category}"
+                                        FontSize="10"
+                                        FontAttributes="Bold"
+                                        TextColor="White" />
+                                </Border>
+                            </Grid>
+
+                            <Label
+                                Text="{Binding Pronunciation}"
+                                FontSize="12"
+                                TextColor="Gray"
+                                FontAttributes="Italic"
+                                IsVisible="{Binding HasPronunciation}" />
+
+                            <Label Text="{Binding Definition}" FontSize="14" />
+
+                            <Label
+                                Text="{Binding Example}"
+                                FontSize="13"
+                                TextColor="#7C3AED"
+                                FontAttributes="Italic" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

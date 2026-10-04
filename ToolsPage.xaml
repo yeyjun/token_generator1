@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TokenGenerator.ToolsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Tools">
+
+    <VerticalStackLayout Padding="24" Spacing="16" HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Speedometer" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" />
+
+        <VerticalStackLayout Spacing="0" HorizontalOptions="Center">
+            <Label x:Name="SpeedLabel" Text="—" FontSize="56" FontAttributes="Bold" TextColor="#7C3AED" HorizontalOptions="Center" />
+            <Label Text="km/h" FontSize="14" TextColor="Gray" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <Label x:Name="StatusLabel" Text="Tap Start to track your current speed via GPS." FontSize="12" TextColor="Gray" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+
+        <Button x:Name="ToggleButton" Text="Start" Clicked="OnToggleClicked" WidthRequest="140" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>

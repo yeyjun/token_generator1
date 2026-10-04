@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TokenGenerator.CalculatorPage"
+             Title="Calculator">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label
+                Text="Calculator"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center" />
+
+            <Picker x:Name="ModePicker" Title="Select a calculator" SelectedIndexChanged="OnModeChanged">
+                <Picker.Items>
+                    <x:String>Percentage</x:String>
+                    <x:String>Average</x:String>
+                    <x:String>Time Difference</x:String>
+                    <x:String>Unit Converter</x:String>
+                    <x:String>Currency</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Percentage -->
+            <VerticalStackLayout x:Name="PercentageSection" Spacing="10" IsVisible="False">
+                <Picker x:Name="PercentageModePicker" Title="Calculation" SelectedIndexChanged="OnPercentageModeChanged">
+                    <Picker.Items>
+                        <x:String>What is X% of Y?</x:String>
+                        <x:String>X is what % of Y?</x:String>
+                        <x:String>% change from X to Y</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="PercentXEntry" Placeholder="X" Keyboard="Numeric" />
+                <Entry x:Name="PercentYEntry" Placeholder="Y" Keyboard="Numeric" />
+                <Button Text="Calculate" Clicked="OnCalculatePercentageClicked" HorizontalOptions="Fill" />
+                <Label x:Name="PercentageResultLabel" FontAttributes="Bold" FontSize="18" />
+            </VerticalStackLayout>
+
+            <!-- Average -->
+            <VerticalStackLayout x:Name="AverageSection" Spacing="10" IsVisible="False">
+                <Editor
+                    x:Name="AverageNumbersEditor"
+                    Placeholder="Enter numbers separated by comma, space, or newline"
+                    HeightRequest="100" />
+                <Button Text="Calculate" Clicked="OnCalculateAverageClicked" HorizontalOptions="Fill" />
+                <Label x:Name="AverageResultLabel" />
+            </VerticalStackLayout>
+
+            <!-- Time Difference -->
+            <VerticalStackLayout x:Name="TimeDiffSection" Spacing="10" IsVisible="False">
+                <Label Text="Start" FontAttributes="Bold" />
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                    <DatePicker x:Name="StartDatePicker" Grid.Column="0" />
+                    <TimePicker x:Name="StartTimePicker" Grid.Column="1" />
+                </Grid>
+
+                <Label Text="End" FontAttributes="Bold" />
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                    <DatePicker x:Name="EndDatePicker" Grid.Column="0" />
+                    <TimePicker x:Name="EndTimePicker" Grid.Column="1" />
+                </Grid>
+
+                <Button Text="Calculate" Clicked="OnCalculateTimeDiffClicked" HorizontalOptions="Fill" />
+                <Label x:Name="TimeDiffResultLabel" FontAttributes="Bold" FontSize="16" />
+            </VerticalStackLayout>
+
+            <!-- Unit Converter -->
+            <VerticalStackLayout x:Name="ConverterSection" Spacing="10" IsVisible="False">
+                <Picker x:Name="ConverterCategoryPicker" Title="Category" SelectedIndexChanged="OnConverterCategoryChanged">
+                    <Picker.Items>
+                        <x:String>Length</x:String>
+                        <x:String>Weight</x:String>
+                        <x:String>Temperature</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="ConverterValueEntry" Placeholder="Value" Keyboard="Numeric" TextChanged="OnConverterValueChanged" />
+                <Picker x:Name="ConverterFromPicker" Title="From" SelectedIndexChanged="OnConverterUnitChanged" />
+                <Picker x:Name="ConverterToPicker" Title="To" SelectedIndexChanged="OnConverterUnitChanged" />
+                <Label x:Name="ConverterResultLabel" FontAttributes="Bold" FontSize="18" />
+            </VerticalStackLayout>
+
+            <!-- Currency -->
+            <VerticalStackLayout x:Name="CurrencySection" Spacing="10" IsVisible="False">
+                <Entry x:Name="CurrencyAmountEntry" Placeholder="Amount" Keyboard="Numeric" TextChanged="OnCurrencyAmountChanged" />
+                <Picker x:Name="CurrencyFromPicker" Title="From" SelectedIndexChanged="OnCurrencyUnitChanged" />
+                <Picker x:Name="CurrencyToPicker" Title="To" SelectedIndexChanged="OnCurrencyUnitChanged" />
+                <Label x:Name="CurrencyResultLabel" FontAttributes="Bold" FontSize="18" />
+                <Label x:Name="CurrencyStatusLabel" TextColor="Gray" FontSize="12" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

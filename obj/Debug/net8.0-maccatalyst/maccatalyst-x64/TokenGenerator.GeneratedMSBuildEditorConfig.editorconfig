@@ -1,0 +1,151 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TokenGenerator
+build_property.ProjectDir = C:\Users\Asus\source\repos\TokenGenerator\TokenGenerator\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/CaesarCipherPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.CaesarCipherPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CaesarCipherPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CaesarCipherPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/CalculatorPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.CalculatorPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CalculatorPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CalculatorPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/CalePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.CalePage.xaml
+build_metadata.AdditionalFiles.TargetPath = CalePage.xaml
+build_metadata.AdditionalFiles.RelativePath = CalePage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/CipherGamePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.CipherGamePage.xaml
+build_metadata.AdditionalFiles.TargetPath = CipherGamePage.xaml
+build_metadata.AdditionalFiles.RelativePath = CipherGamePage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/DealOrNoDealPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.DealOrNoDealPage.xaml
+build_metadata.AdditionalFiles.TargetPath = DealOrNoDealPage.xaml
+build_metadata.AdditionalFiles.RelativePath = DealOrNoDealPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/DictionaryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.DictionaryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = DictionaryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = DictionaryPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/HangarooPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.HangarooPage.xaml
+build_metadata.AdditionalFiles.TargetPath = HangarooPage.xaml
+build_metadata.AdditionalFiles.RelativePath = HangarooPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = HomePage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/LETReviewerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.LETReviewerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LETReviewerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LETReviewerPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/NoteDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.NoteDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = NoteDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = NoteDetailPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/NoteEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.NoteEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = NoteEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = NoteEditPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/NotesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.NotesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = NotesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = NotesPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/RosaryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.RosaryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RosaryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RosaryPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/SpeedTestPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.SpeedTestPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SpeedTestPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SpeedTestPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/SpotifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.SpotifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SpotifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SpotifyPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/TokenGeneratorPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.TokenGeneratorPage.xaml
+build_metadata.AdditionalFiles.TargetPath = TokenGeneratorPage.xaml
+build_metadata.AdditionalFiles.RelativePath = TokenGeneratorPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/ToolsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.ToolsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ToolsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ToolsPage.xaml
+
+[C:/Users/Asus/source/repos/TokenGenerator/TokenGenerator/WeatherPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TokenGenerator.WeatherPage.xaml
+build_metadata.AdditionalFiles.TargetPath = WeatherPage.xaml
+build_metadata.AdditionalFiles.RelativePath = WeatherPage.xaml

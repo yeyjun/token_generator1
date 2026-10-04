@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TokenGenerator.RosaryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Holy Rosary">
+
+    <Grid Padding="20" RowDefinitions="Auto,Auto,Auto,*,Auto" RowSpacing="14">
+
+        <Picker Grid.Row="0" x:Name="MysteryPicker" Title="Mystery" SelectedIndexChanged="OnMysteryChanged" />
+
+        <VerticalStackLayout Grid.Row="1" Spacing="4">
+            <Label x:Name="ProgressLabel" FontSize="12" TextColor="Gray" HorizontalOptions="Center" />
+            <ProgressBar x:Name="StepProgressBar" ProgressColor="#7C3AED" />
+        </VerticalStackLayout>
+
+        <Label Grid.Row="2" x:Name="SectionLabel" FontSize="13" FontAttributes="Bold" TextColor="#7C3AED" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+
+        <ScrollView Grid.Row="3">
+            <VerticalStackLayout Spacing="14" VerticalOptions="Center" Padding="4,10">
+                <Label x:Name="StepTitleLabel" FontSize="26" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+                <Label x:Name="StepTextLabel" FontSize="16" HorizontalTextAlignment="Center" LineHeight="1.3" />
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Grid Grid.Row="4" ColumnDefinitions="*,Auto,*" ColumnSpacing="10">
+            <Button Grid.Column="0" x:Name="BackButton" Text="Back" Clicked="OnBackClicked" />
+            <Button Grid.Column="1" Text="Restart" BackgroundColor="Transparent" TextColor="Gray" Clicked="OnRestartClicked" />
+            <Button Grid.Column="2" x:Name="NextButton" Text="Next" BackgroundColor="#7C3AED" TextColor="White" Clicked="OnNextClicked" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

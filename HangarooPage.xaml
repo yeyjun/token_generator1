@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TokenGenerator.HangarooPage"
+             Title="Hangaroo">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,20" Spacing="16">
+
+            <Label
+                Text="Hangaroo"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center" />
+            <Label
+                Text="Guess the phrase before the kangaroo runs out of hops."
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                x:Name="CategoryLabel"
+                FontAttributes="Bold"
+                TextColor="#7C3AED"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                x:Name="PhraseDisplayLabel"
+                FontSize="24"
+                FontFamily="OpenSansSemibold"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="LivesLabel"
+                HorizontalTextAlignment="Center" />
+
+            <FlexLayout
+                x:Name="LettersLayout"
+                Wrap="Wrap"
+                JustifyContent="Center"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="FeedbackLabel"
+                HorizontalTextAlignment="Center"
+                FontAttributes="Bold" />
+
+            <Label
+                x:Name="ScoreLabel"
+                Text="Score: 0"
+                HorizontalTextAlignment="Center"
+                TextColor="Gray" />
+
+            <Button
+                x:Name="NewGameButton"
+                Text="New Phrase"
+                Clicked="OnNewGameClicked"
+                HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
